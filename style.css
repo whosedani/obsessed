@@ -181,8 +181,9 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 58vh;
   overflow: hidden;
 }
 .hero-video {
