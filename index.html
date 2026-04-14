@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>become obsessed.</title>
+  <meta name="description" content="motivation fades. discipline breaks. obsession delivers.">
+  <meta property="og:title" content="become obsessed.">
+  <meta property="og:description" content="motivation fades. discipline breaks. obsession delivers.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0C0A09">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700;800;900&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Sans+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <svg class="noise" aria-hidden="true">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0.1"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+  </svg>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- EMBER PARTICLES -->
+  <div class="embers" aria-hidden="true">
+    <div class="ember"></div><div class="ember"></div><div class="ember"></div>
+    <div class="ember"></div><div class="ember"></div><div class="ember"></div>
+    <div class="ember"></div><div class="ember"></div><div class="ember"></div>
+    <div class="ember"></div><div class="ember"></div><div class="ember"></div>
+    <div class="ember"></div><div class="ember"></div><div class="ember"></div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">locked in.</div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">obsessed</a>
+    <span class="nav-ca" id="nav-ca" title="Click to copy CA">COMING_SOON</span>
+    <div class="nav-right">
+      <a href="#" class="nav-twitter" id="nav-twitter" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="#" class="nav-buy" id="nav-buy" target="_blank" rel="noopener">buy</a>
+    </div>
+  </nav>
+
+  <!-- I — HERO -->
+  <section class="hero" id="hero">
+    <video class="hero-video" id="hero-video" autoplay muted loop playsinline>
+      <source src="/static/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-title-top">BECOME</span>
+        <span class="hero-title-bottom">OBSESSED.</span>
+      </h1>
+      <div class="hero-scramble" id="hero-scramble"></div>
+      <a href="#" class="hero-buy-btn" id="hero-buy-btn">buy $obsessed</a>
+    </div>
+    <button class="sound-btn" id="sound-btn">
+      <span class="sound-icon">&#x1F507;</span>
+      <span class="sound-text">sound</span>
+    </button>
+    <div class="scroll-hint">SCROLL DOWN</div>
+  </section>
+
+  <!-- II — THE TRUTH -->
+  <section class="section truth" id="truth">
+    <div class="section-inner">
+      <span class="section-tag">THE TRUTH</span>
+      <h2 class="section-title">Motivation Is a Lie</h2>
+      <div class="truth-text">
+        <p>Everyone talks about motivation. Wake up early, watch a speech, feel the fire. Then what? By Tuesday the fire is dead. You hit snooze. You skip the gym. You tell yourself "tomorrow."</p>
+        <p>Then they talk about discipline. Force yourself. Build habits. Show up when you don't want to. And it works — for a while. Until willpower runs dry and life hits back. Discipline is a battery. It drains.</p>
+        <p>But obsession? Obsession is a different animal entirely.</p>
+      </div>
+      <blockquote class="truth-highlight">Obsession doesn't need an alarm clock. It IS the alarm clock.</blockquote>
+      <div class="truth-text">
+        <p>When you're obsessed, you don't need motivation to show up. You can't stop showing up. The work isn't a chore — it's the only thing that makes sense. You think about it in the shower. You dream about it. You cancel plans because you'd rather be in the lab.</p>
+        <p>Michael Jordan didn't need a motivational poster. Kobe didn't need a habit tracker. Elon doesn't need an accountability partner. They are consumed by the work. The work is the air they breathe.</p>
+        <p>Obsession is the only competitive advantage that can't be taught, bought, or faked.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- III — THE LADDER -->
+  <section class="section ladder" id="ladder">
+    <div class="section-inner">
+      <span class="section-tag">THE LADDER</span>
+      <h2 class="section-title">Three Levels. Only One Wins.</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- Level 1 — MOTIVATION -->
+        <div class="timeline-level level-1" data-level="1">
+          <div class="timeline-dot dot-1"></div>
+          <div class="timeline-content right">
+            <h3 class="level-name level-name-muted">MOTIVATION</h3>
+            <p class="level-quote">"I want to do this."</p>
+            <div class="level-card">
+              <p>Comes and goes. Depends on mood, weather, sleep, a YouTube video. It's the spark that starts the fire — and the first thing to burn out. Average lifespan: 72 hours.</p>
+            </div>
+            <div class="progress-bar" data-fill="15">
+              <div class="progress-fill progress-muted"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level 2 — DISCIPLINE -->
+        <div class="timeline-level level-2" data-level="2">
+          <div class="timeline-dot dot-2"></div>
+          <div class="timeline-content left">
+            <h3 class="level-name">DISCIPLINE</h3>
+            <p class="level-quote">"I have to do this."</p>
+            <div class="level-card">
+              <p>Stronger. You show up even when you don't want to. But discipline runs on willpower, and willpower is a finite resource. You can grind for months — then one bad week breaks the chain. Good enough for most. Not enough for the top.</p>
+            </div>
+            <div class="progress-bar" data-fill="55">
+              <div class="progress-fill progress-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level 3 — OBSESSION -->
+        <div class="timeline-level level-3" data-level="3">
+          <div class="timeline-dot dot-3"></div>
+          <div class="timeline-content right">
+            <h3 class="level-name level-name-orange">OBSESSION</h3>
+            <p class="level-quote level-quote-orange">"I can't NOT do this."</p>
+            <div class="level-card level-card-accent">
+              <p>You don't decide to wake up at 4am — you can't sleep because the idea won't let you. You don't schedule practice — you practice until someone tells you to stop. You don't build habits — the work IS your identity. There is no burnout because the fuel is unlimited. You are the fuel.</p>
+            </div>
+            <div class="progress-bar" data-fill="100">
+              <div class="progress-fill progress-orange"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ladder-flash" id="ladder-flash"></div>
+  </section>
+
+  <!-- IV — THE EVIDENCE -->
+  <section class="section evidence" id="evidence">
+    <div class="section-inner">
+      <span class="section-tag">THE EVIDENCE</span>
+      <h2 class="section-title">Words From the Obsessed</h2>
+      <p class="evidence-subtitle"><em>"don't take advice from balanced people."</em></p>
+    </div>
+    <div class="video-gallery">
+      <div class="video-gallery-track">
+        <div class="video-slot">
+          <video autoplay muted loop playsinline><source src="/static/videos/1.mp4" type="video/mp4"></video>
+          <button class="video-sound-btn">&#x1F507;</button>
+        </div>
+        <div class="video-slot">
+          <video autoplay muted loop playsinline><source src="/static/videos/2.mp4" type="video/mp4"></video>
+          <button class="video-sound-btn">&#x1F507;</button>
+        </div>
+        <div class="video-slot">
+          <video autoplay muted loop playsinline><source src="/static/videos/3.mp4" type="video/mp4"></video>
+          <button class="video-sound-btn">&#x1F507;</button>
+        </div>
+        <div class="video-slot">
+          <video autoplay muted loop playsinline><source src="/static/videos/4.mp4" type="video/mp4"></video>
+          <button class="video-sound-btn">&#x1F507;</button>
+        </div>
+        <div class="video-slot">
+          <video autoplay muted loop playsinline><source src="/static/videos/5.mp4" type="video/mp4"></video>
+          <button class="video-sound-btn">&#x1F507;</button>
+        </div>
+        <div class="video-slot">
+          <video autoplay muted loop playsinline><source src="/static/videos/6.mp4" type="video/mp4"></video>
+          <button class="video-sound-btn">&#x1F507;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- V — THE SIGNS -->
+  <section class="section signs" id="signs">
+    <div class="section-inner">
+      <span class="section-tag">THE SIGNS</span>
+      <h2 class="section-title">You Might Already Be Obsessed If</h2>
+      <div class="signs-list">
+        <div class="sign-row"><span class="sign-num">01</span><span class="sign-text">you forget to eat because you're deep in the work</span></div>
+        <div class="sign-row"><span class="sign-num">02</span><span class="sign-text">people say "you need balance" and you physically cringe</span></div>
+        <div class="sign-row"><span class="sign-num">03</span><span class="sign-text">your screen time is 16 hours and it was all one app</span></div>
+        <div class="sign-row"><span class="sign-num">04</span><span class="sign-text">you cancelled vacations because "momentum"</span></div>
+        <div class="sign-row"><span class="sign-num">05</span><span class="sign-text">you've said "just one more hour" at 3am — six hours ago</span></div>
+        <div class="sign-row"><span class="sign-num">06</span><span class="sign-text">your friends stopped inviting you because the answer is always no</span></div>
+        <div class="sign-row"><span class="sign-num">07</span><span class="sign-text">the work doesn't feel like work. the rest of life feels like the interruption.</span></div>
+        <div class="sign-row"><span class="sign-num">08</span><span class="sign-text">you read this list and felt seen, not concerned</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VI — BIG QUOTE -->
+  <section class="section bigquote" id="bigquote">
+    <div class="section-inner">
+      <div class="bigquote-text" id="bigquote-text">
+        <span class="bq-word">THE</span>
+        <span class="bq-word">WORLD</span>
+        <span class="bq-word">DOESN'T</span>
+        <span class="bq-word">REWARD</span>
+        <span class="bq-word">THE</span>
+        <span class="bq-word">MOTIVATED.</span>
+        <span class="bq-word">IT</span>
+        <span class="bq-word">DOESN'T</span>
+        <span class="bq-word">REWARD</span>
+        <span class="bq-word">THE</span>
+        <span class="bq-word">DISCIPLINED.</span>
+        <span class="bq-word">IT</span>
+        <span class="bq-word">REWARDS</span>
+        <span class="bq-word">THE</span>
+        <span class="bq-word">ONES</span>
+        <span class="bq-word">WHO</span>
+        <span class="bq-word bq-accent">CAN'T</span>
+        <span class="bq-word bq-accent">STOP.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VII — HOW TO BUY -->
+  <section class="section howtobuy" id="howtobuy">
+    <div class="section-inner">
+      <span class="section-tag">GET OBSESSED</span>
+      <div class="buy-steps">
+        <div class="buy-step">
+          <span class="buy-step-num">I</span>
+          <p class="buy-step-text">Get <strong>Phantom</strong>. The wallet of the obsessed.</p>
+        </div>
+        <div class="buy-step">
+          <span class="buy-step-num">II</span>
+          <p class="buy-step-text">Buy <strong>SOL</strong>. Fuel the fire.</p>
+        </div>
+        <div class="buy-step">
+          <span class="buy-step-num">III</span>
+          <p class="buy-step-text">Swap for <strong>$obsessed</strong> on pump.fun.</p>
+        </div>
+        <div class="buy-step">
+          <span class="buy-step-num">IV</span>
+          <p class="buy-step-text">Hold. The obsessed don't sell. They accumulate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIII — SCROLL WORDS -->
+  <section class="scroll-words">
+    <div class="scroll-word sw-left"><span>GRIND.</span></div>
+    <div class="scroll-word sw-right"><span>BURN.</span></div>
+    <div class="scroll-word sw-left"><span>OBSESS.</span></div>
+    <div class="scroll-word sw-right sw-accent"><span>WIN.</span></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-title">become obsessed. on-chain.</div>
+    <span class="footer-ca" id="footer-ca">COMING_SOON</span>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
