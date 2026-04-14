@@ -56,6 +56,14 @@
 
   soundBtn.addEventListener('click', function () {
     if (heroMuted) {
+      // Mute evidence video first
+      var ev = document.getElementById('evidence-video');
+      if (ev && !ev.paused) {
+        ev.muted = true;
+        ev.pause();
+        var epb = document.getElementById('evidence-play-btn');
+        if (epb) epb.classList.remove('hidden');
+      }
       heroVideo.muted = false;
       heroVideo.volume = 0;
       var ramp = setInterval(function () {
@@ -199,31 +207,43 @@
     el.classList.add('visible');
   }, { threshold: 0.3 });
 
-  /* ── VIDEO GALLERY — individual sound toggle ── */
-  document.querySelectorAll('.video-sound-btn').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var slot = btn.closest('.video-slot');
-      var video = slot.querySelector('video');
+  /* ── EVIDENCE VIDEO — play/pause + mutual muting with hero ── */
+  var evVideo = document.getElementById('evidence-video');
+  var evPlayBtn = document.getElementById('evidence-play-btn');
+  var evPlaying = false;
 
-      // Mute all other videos first
-      document.querySelectorAll('.video-slot video').forEach(function (v) {
-        if (v !== video) {
-          v.muted = true;
-          var otherBtn = v.closest('.video-slot').querySelector('.video-sound-btn');
-          otherBtn.textContent = '\u{1F507}';
-        }
-      });
+  function muteHero() {
+    heroVideo.muted = true;
+    heroVideo.volume = 0;
+    soundIcon.textContent = '\u{1F507}';
+    soundText.textContent = 'sound';
+    heroMuted = true;
+  }
 
-      if (video.muted) {
-        video.muted = false;
-        video.volume = 0.5;
-        btn.textContent = '\u{1F50A}';
-      } else {
-        video.muted = true;
-        btn.textContent = '\u{1F507}';
-      }
-    });
+  function muteEvidence() {
+    evVideo.muted = true;
+    evVideo.pause();
+    evPlayBtn.classList.remove('hidden');
+    evPlaying = false;
+  }
+
+  evPlayBtn.addEventListener('click', function () {
+    // Mute hero first
+    muteHero();
+    // Play evidence video with sound
+    evVideo.muted = false;
+    evVideo.volume = 0.5;
+    evVideo.play();
+    evPlayBtn.classList.add('hidden');
+    evPlaying = true;
+  });
+
+  // Click on video box to pause/show play button again
+  document.getElementById('evidence-video-box').addEventListener('click', function (e) {
+    if (e.target === evPlayBtn || evPlayBtn.contains(e.target)) return;
+    if (evPlaying) {
+      muteEvidence();
+    }
   });
 
 })();

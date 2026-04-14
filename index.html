@@ -157,32 +157,14 @@
       <h2 class="section-title">Words From the Obsessed</h2>
       <p class="evidence-subtitle"><em>"don't take advice from balanced people."</em></p>
     </div>
-    <div class="video-gallery">
-      <div class="video-gallery-track">
-        <div class="video-slot">
-          <video autoplay muted loop playsinline><source src="/static/videos/1.mp4" type="video/mp4"></video>
-          <button class="video-sound-btn">&#x1F507;</button>
-        </div>
-        <div class="video-slot">
-          <video autoplay muted loop playsinline><source src="/static/videos/2.mp4" type="video/mp4"></video>
-          <button class="video-sound-btn">&#x1F507;</button>
-        </div>
-        <div class="video-slot">
-          <video autoplay muted loop playsinline><source src="/static/videos/3.mp4" type="video/mp4"></video>
-          <button class="video-sound-btn">&#x1F507;</button>
-        </div>
-        <div class="video-slot">
-          <video autoplay muted loop playsinline><source src="/static/videos/4.mp4" type="video/mp4"></video>
-          <button class="video-sound-btn">&#x1F507;</button>
-        </div>
-        <div class="video-slot">
-          <video autoplay muted loop playsinline><source src="/static/videos/5.mp4" type="video/mp4"></video>
-          <button class="video-sound-btn">&#x1F507;</button>
-        </div>
-        <div class="video-slot">
-          <video autoplay muted loop playsinline><source src="/static/videos/6.mp4" type="video/mp4"></video>
-          <button class="video-sound-btn">&#x1F507;</button>
-        </div>
+    <div class="evidence-video-wrap">
+      <div class="evidence-video-box" id="evidence-video-box">
+        <video id="evidence-video" muted loop playsinline preload="metadata">
+          <source src="/static/videos/1.mp4" type="video/mp4">
+        </video>
+        <button class="evidence-play-btn" id="evidence-play-btn">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/><polygon points="19,14 19,34 36,24" fill="currentColor"/></svg>
+        </button>
       </div>
     </div>
   </section>
