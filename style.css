@@ -472,12 +472,6 @@ body {
   background: var(--furnace);
   padding: 80px 0;
 }
-.evidence-subtitle {
-  font-family: 'Figtree', sans-serif;
-  font-size: 15px;
-  color: var(--charred);
-  margin-bottom: 40px;
-}
 
 /* Evidence single video */
 .evidence-video-wrap {
