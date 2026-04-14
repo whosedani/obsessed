@@ -481,14 +481,13 @@ body {
 
 /* Evidence single video */
 .evidence-video-wrap {
-  display: flex;
-  justify-content: center;
+  max-width: 780px;
+  margin: 0 auto;
   padding: 0 24px;
 }
 .evidence-video-box {
   position: relative;
   width: 100%;
-  max-width: 520px;
   aspect-ratio: 1 / 1;
   border-radius: 8px;
   overflow: hidden;
